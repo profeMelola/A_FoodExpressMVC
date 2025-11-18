@@ -14,8 +14,10 @@ public class AppConfig {
     @Value("${api.auth-url}")
     private String authUrl;
 
+
     @Bean
-    public WebClient webClientAPI(WebClient.Builder builder) {
+    public WebClient webClientApi(WebClient.Builder builder) {
+
         return builder
                 .baseUrl(apiUrl)
                 .build();
